@@ -1,87 +1,83 @@
 
-import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 import { Phone, MessageCircle, ExternalLink } from "lucide-react";
 
 const Contacts = () => {
   return (
     <div className="min-h-screen py-16 px-4 bg-space-dark bg-gradient-to-b from-space-dark via-space-medium to-space-dark">
-      <div className="container mx-auto max-w-4xl">
+      <div className="container mx-auto max-w-5xl">
         <h1 className="text-5xl font-bold text-center text-white mb-4 animate-neon-pulse">
           Контакты
         </h1>
-        <p className="text-xl text-center text-gray-300 mb-12">
-          Свяжитесь с электриком в Колпино
+        <p className="text-xl text-center text-gray-300 mb-12 max-w-3xl mx-auto">
+          Свяжитесь с электриком в Колпино любым удобным способом
         </p>
 
-        <Card className="bg-black/40 backdrop-blur-sm border border-neon-purple/30 overflow-hidden mb-8">
-          <CardContent className="p-8">
-            <div className="flex flex-col md:flex-row justify-between items-center gap-8">
-              <div className="space-y-4 text-center md:text-left">
-                <h2 className="text-2xl font-bold text-white">Телефон для связи</h2>
-                <p className="text-3xl font-bold text-neon-purple animate-neon-pulse">8 950 030-88-30</p>
-                <p className="text-gray-300">Колпинский район Санкт-Петербурга</p>
-              </div>
-              
-              <div className="flex flex-col gap-4 w-full md:w-auto">
-                <Button className="bg-space-medium hover:bg-space-light border border-neon-blue text-white group transition-all">
-                  <Phone className="mr-2 h-4 w-4 group-hover:text-neon-blue" /> 
-                  <a href="tel:89500308830" className="group-hover:text-neon-blue">Позвонить</a>
-                </Button>
-                
-                <Button variant="outline" className="border-neon-green hover:bg-space-light text-white group transition-all">
-                  <MessageCircle className="mr-2 h-4 w-4 text-neon-green" /> 
-                  <a href="https://wa.me/89500308830" target="_blank" rel="noopener noreferrer" className="group-hover:text-neon-green">
-                    WhatsApp
-                  </a>
-                </Button>
-                
-                <Button variant="outline" className="border-neon-blue hover:bg-space-light text-white group transition-all">
-                  <MessageCircle className="mr-2 h-4 w-4 text-neon-blue" /> 
-                  <a href="https://t.me/89500308830" target="_blank" rel="noopener noreferrer" className="group-hover:text-neon-blue">
-                    Telegram
-                  </a>
-                </Button>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <Card className="bg-black/40 backdrop-blur-sm border border-neon-yellow/30 overflow-hidden hover:shadow-[0_0_15px_rgba(255,255,0,0.3)] transition-all">
-            <CardContent className="p-6">
-              <h3 className="text-xl font-bold text-neon-yellow mb-2">Другие сайты</h3>
-              <div className="space-y-3">
-                <a 
-                  href="http://elektrikkolpino.bos.ru" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex items-center text-white hover:text-neon-yellow transition-colors"
-                >
-                  <ExternalLink className="h-4 w-4 mr-2" />
-                  elektrikkolpino.bos.ru
-                </a>
-                <a 
-                  href="http://elektrik-kolpino.narod.ru" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex items-center text-white hover:text-neon-yellow transition-colors"
-                >
-                  <ExternalLink className="h-4 w-4 mr-2" />
-                  elektrik-kolpino.narod.ru
-                </a>
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card className="bg-black/40 backdrop-blur-sm border border-neon-pink/30 overflow-hidden hover:shadow-[0_0_15px_rgba(255,0,255,0.3)] transition-all">
-            <CardContent className="p-6">
-              <h3 className="text-xl font-bold text-neon-pink mb-2">Зона обслуживания</h3>
-              <p className="text-white">
-                Колпинский район Санкт-Петербурга, город Колпино и ближайшие населенные пункты.
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <Card className="bg-black/40 backdrop-blur-sm border border-neon-purple/30 text-white overflow-hidden hover:shadow-[0_0_15px_rgba(155,135,245,0.5)] transition-all duration-300">
+            <CardContent className="p-8">
+              <h2 className="text-3xl font-bold text-neon-purple mb-6">Телефон</h2>
+              <p className="text-lg text-gray-300 mb-8">
+                Самый быстрый способ связаться и вызвать электрика в Колпино — просто позвонить по телефону
               </p>
+              <a href="tel:89500308830" className="inline-block w-full">
+                <Button size="lg" className="w-full bg-space-medium hover:bg-space-light border border-neon-purple text-white group transition-all text-xl p-6">
+                  <Phone className="mr-3 h-6 w-6 group-hover:text-neon-purple" /> 
+                  <span className="group-hover:text-neon-purple">8 950 030-88-30</span>
+                </Button>
+              </a>
             </CardContent>
           </Card>
+
+          <Card className="bg-black/40 backdrop-blur-sm border border-neon-blue/30 text-white overflow-hidden hover:shadow-[0_0_15px_rgba(0,243,255,0.5)] transition-all duration-300">
+            <CardContent className="p-8">
+              <h2 className="text-3xl font-bold text-neon-blue mb-6">Мессенджеры</h2>
+              <p className="text-lg text-gray-300 mb-8">
+                Напишите сообщение в любом удобном для вас мессенджере
+              </p>
+              <div className="flex flex-col gap-4">
+                <a href="https://t.me/89500308830" target="_blank" rel="noopener noreferrer" className="inline-block w-full">
+                  <Button size="lg" className="w-full bg-space-medium hover:bg-space-light border border-neon-blue text-white group transition-all text-xl p-6">
+                    <MessageCircle className="mr-3 h-6 w-6 group-hover:text-neon-blue" /> 
+                    <span className="group-hover:text-neon-blue">Telegram</span>
+                  </Button>
+                </a>
+                <a href="https://wa.me/89500308830" target="_blank" rel="noopener noreferrer" className="inline-block w-full">
+                  <Button size="lg" className="w-full bg-space-medium hover:bg-space-light border border-neon-green text-white group transition-all text-xl p-6">
+                    <MessageCircle className="mr-3 h-6 w-6 group-hover:text-neon-green" /> 
+                    <span className="group-hover:text-neon-green">WhatsApp</span>
+                  </Button>
+                </a>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        <div className="mt-16">
+          <h2 className="text-3xl font-bold text-center text-white mb-8">
+            Мои сайты
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            <a 
+              href="http://elektrikkolpino.bos.ru" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="bg-black/30 border border-neon-pink/20 p-6 rounded-lg flex items-center gap-3 hover:border-neon-pink/60 transition-all duration-300"
+            >
+              <ExternalLink className="h-6 w-6 text-neon-pink" />
+              <span className="text-xl text-white">elektrikkolpino.bos.ru</span>
+            </a>
+            <a 
+              href="http://elektrik-kolpino.narod.ru" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="bg-black/30 border border-neon-purple/20 p-6 rounded-lg flex items-center gap-3 hover:border-neon-purple/60 transition-all duration-300"
+            >
+              <ExternalLink className="h-6 w-6 text-neon-purple" />
+              <span className="text-xl text-white">elektrik-kolpino.narod.ru</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
