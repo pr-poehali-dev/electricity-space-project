@@ -1,7 +1,7 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Phone, Zap } from "lucide-react";
+import { Phone, Zap, Wrench } from "lucide-react";
 
 const Services = () => {
   return (

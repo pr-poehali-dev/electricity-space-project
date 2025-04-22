@@ -1,55 +1,70 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Lightbulb, Wifi, Cable } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Smartphone, Wifi, Lightbulb, Phone } from "lucide-react";
 
 const SmartHome = () => {
   return (
     <div className="min-h-screen py-16 px-4 bg-space-dark bg-gradient-to-b from-space-dark via-space-medium to-space-dark">
       <div className="container mx-auto">
-        <h1 className="text-5xl font-bold text-center text-white mb-4 animate-neon-pulse">
+        <h1 className="text-5xl font-bold text-center text-white mb-8 animate-neon-pulse">
           Умный дом в Колпино
         </h1>
-        <p className="text-xl text-center text-gray-300 mb-12">
-          Современные технологии для вашего комфорта
-        </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          <div className="p-6 rounded-lg bg-gradient-to-br from-space-medium/40 to-space-light/20 backdrop-blur-sm border border-neon-blue/20 flex flex-col items-center transform hover:scale-105 transition-all">
-            <Wifi className="h-14 w-14 text-neon-blue mb-4 animate-glow" />
-            <h3 className="text-xl font-bold text-white mb-2">Wi-Fi розетки</h3>
-            <p className="text-gray-300 text-center">Управляйте питанием устройств удаленно с вашего смартфона</p>
-          </div>
-
-          <div className="p-6 rounded-lg bg-gradient-to-br from-space-medium/40 to-space-light/20 backdrop-blur-sm border border-neon-purple/20 flex flex-col items-center transform hover:scale-105 transition-all">
-            <Lightbulb className="h-14 w-14 text-neon-purple mb-4 animate-glow" />
-            <h3 className="text-xl font-bold text-white mb-2">Умные светильники</h3>
-            <p className="text-gray-300 text-center">Управление яркостью и цветом света через приложение</p>
-          </div>
-
-          <div className="p-6 rounded-lg bg-gradient-to-br from-space-medium/40 to-space-light/20 backdrop-blur-sm border border-neon-pink/20 flex flex-col items-center transform hover:scale-105 transition-all">
-            <Cable className="h-14 w-14 text-neon-pink mb-4 animate-glow" />
-            <h3 className="text-xl font-bold text-white mb-2">Сенсорные выключатели</h3>
-            <p className="text-gray-300 text-center">Современная замена устаревшим механическим выключателям</p>
-          </div>
+        
+        <div className="max-w-3xl mx-auto text-center mb-12">
+          <p className="text-xl text-gray-300">
+            В 2025 году есть все возможности установить умные системы управления домом. 
+            Вызовите электрика в Колпино и модернизируйте ваш дом!
+          </p>
         </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+          <Card className="bg-black/40 backdrop-blur-sm border border-neon-blue/30 text-white overflow-hidden hover:shadow-[0_0_15px_rgba(0,243,255,0.5)] transition-all duration-300">
+            <CardHeader className="pb-2">
+              <div className="mb-2 text-neon-blue">
+                <Smartphone className="h-8 w-8 mx-auto" />
+              </div>
+              <CardTitle className="text-neon-blue text-center">Умные выключатели</CardTitle>
+              <CardDescription className="text-gray-300 text-center">Управление со смартфона</CardDescription>
+            </CardHeader>
+            <CardContent className="text-center">
+              <p className="mb-4">Установка сенсорных и дистанционных выключателей. Управляйте освещением через приложение!</p>
+            </CardContent>
+          </Card>
 
-        <div className="bg-black/40 backdrop-blur-sm p-8 rounded-lg border border-neon-green/30">
-          <h2 className="text-2xl font-bold text-neon-green mb-4">Умный дом 2025</h2>
-          <p className="text-white mb-4">
-            В настоящее время уже в 2025 году есть все возможности установить дистанционные умные выключатели и розетки и подключить их к функции умный дом.
-          </p>
-          <p className="text-white mb-4">
-            Если вы вызовете электрика в Колпино по телефону <span className="text-neon-yellow font-bold">8 950 030-88-30</span>, вы можете установить:
-          </p>
-          <ul className="list-disc list-inside text-white space-y-2 mb-4">
-            <li>Сенсорные выключатели</li>
-            <li>Умные розетки</li>
-            <li>Wi-Fi розетки и выключатели</li>
-            <li>Умные светильники с дистанционным управлением</li>
-          </ul>
-          <p className="text-gray-300 italic">
-            Управляйте всем освещением и электропитанием в доме с помощью вашего смартфона!
-          </p>
+          <Card className="bg-black/40 backdrop-blur-sm border border-neon-purple/30 text-white overflow-hidden hover:shadow-[0_0_15px_rgba(155,135,245,0.5)] transition-all duration-300">
+            <CardHeader className="pb-2">
+              <div className="mb-2 text-neon-purple">
+                <Wifi className="h-8 w-8 mx-auto" />
+              </div>
+              <CardTitle className="text-neon-purple text-center">Wi-Fi розетки</CardTitle>
+              <CardDescription className="text-gray-300 text-center">Удаленное управление</CardDescription>
+            </CardHeader>
+            <CardContent className="text-center">
+              <p className="mb-4">Установка умных розеток с возможностью удаленного управления через Wi-Fi и мониторингом энергопотребления.</p>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-black/40 backdrop-blur-sm border border-neon-pink/30 text-white overflow-hidden hover:shadow-[0_0_15px_rgba(255,0,255,0.5)] transition-all duration-300">
+            <CardHeader className="pb-2">
+              <div className="mb-2 text-neon-pink">
+                <Lightbulb className="h-8 w-8 mx-auto" />
+              </div>
+              <CardTitle className="text-neon-pink text-center">Умное освещение</CardTitle>
+              <CardDescription className="text-gray-300 text-center">Современные технологии</CardDescription>
+            </CardHeader>
+            <CardContent className="text-center">
+              <p className="mb-4">Установка умных светильников с возможностью изменения яркости, цвета и дистанционного управления.</p>
+            </CardContent>
+          </Card>
+        </div>
+        
+        <div className="mt-16 text-center">
+          <Button className="px-8 py-6 bg-space-medium hover:bg-space-light border-2 border-neon-purple text-white text-xl group transition-all hover:shadow-[0_0_15px_rgba(155,135,245,0.7)]">
+            <Phone className="mr-3 h-5 w-5 group-hover:text-neon-purple" /> 
+            <span className="group-hover:text-neon-purple">Вызвать электрика: 8 950 030-88-30</span>
+          </Button>
+          <p className="mt-4 text-gray-300">Модернизируйте свой дом с помощью современных технологий!</p>
         </div>
       </div>
     </div>
