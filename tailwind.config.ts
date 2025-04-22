@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -6,7 +7,7 @@ export default {
 		"./pages/**/*.{ts,tsx}",
 		"./components/**/*.{ts,tsx}",
 		"./app/**/*.{ts,tsx}",
-		"./src/**/*.{ts,tsx}",
+		"./src/**/*.{ts,tsx}"
 	],
 	prefix: "",
 	theme: {
@@ -61,6 +62,20 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Космические цвета
+				neon: {
+					blue: '#00f3ff',
+					purple: '#9b87f5',
+					pink: '#ff00ff',
+					yellow: '#ffff00',
+					green: '#00ff00',
+					red: '#ff0066'
+				},
+				space: {
+					dark: '#0f0c29',
+					medium: '#302b63',
+					light: '#24243e'
 				}
 			},
 			borderRadius: {
@@ -84,11 +99,48 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'neon-pulse': {
+					'0%, 100%': { 
+						'text-shadow': '0 0 5px #00f3ff, 0 0 10px #00f3ff, 0 0 20px #00f3ff',
+						'box-shadow': '0 0 5px #00f3ff, 0 0 10px #00f3ff'
+					},
+					'50%': { 
+						'text-shadow': '0 0 10px #9b87f5, 0 0 20px #9b87f5, 0 0 30px #9b87f5',
+						'box-shadow': '0 0 10px #9b87f5, 0 0 20px #9b87f5'
+					}
+				},
+				'glow': {
+					'0%, 100%': { 'filter': 'brightness(1)' },
+					'50%': { 'filter': 'brightness(1.3)' }
+				},
+				'lightning': {
+					'0%': {
+						'opacity': '1'
+					},
+					'2%': {
+						'opacity': '0.1'
+					},
+					'8%': {
+						'opacity': '1'
+					},
+					'10%': {
+						'opacity': '0.3'
+					},
+					'12%': {
+						'opacity': '1'
+					},
+					'100%': {
+						'opacity': '1'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'neon-pulse': 'neon-pulse 3s infinite',
+				'glow': 'glow 2s ease-in-out infinite',
+				'lightning': 'lightning 5s infinite'
 			}
 		}
 	},
